@@ -1,0 +1,18 @@
+/* 样式用于固定顶部的消息 */
+#kopi-message-box {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  margin-left: 75px;
+  width: 150px;
+  height: 36px;
+  line-height: 36px;
+  color: rgb(126, 192, 80);
+  background-color: rgb(242, 249, 236);
+  text-align: center;
+  transition: all 1s ease-in-out; /* 过渡效果 */
+  opacity: 1; /* 初始透明度 */
+  z-index: 9999;
+  text-align: center;
+  border-radius: 6px;
+}
