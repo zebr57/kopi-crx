@@ -20,11 +20,9 @@
 
 当我们没有登录 csdn 账号时，禁止选中内容、复制时会弹登录窗口，并且复制不成功，打开 Kopi，即可自由复制！
 
-![未登录csdn](./public/assets/images/csdn-not-login.jpg)
-
 ![Kopi复制csdn](./public/assets/images/kopi-csdn.gif)
 
-像掘金复制代码后粘贴代码有时会附带小尾巴，小尾巴信息是我们需要的，打卡 Kopi 复制不会携带！
+像掘金复制代码后粘贴时会携带小尾巴，小尾巴信息不是我们需要的，打开 Kopi 复制不会携带！
 
 ![携带小尾巴](./public/assets/images/juejin-default-copy.jpg)
 
