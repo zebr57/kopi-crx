@@ -17,7 +17,7 @@ function handleCopy(e) {
     .writeText(copyText)
     .then(() => {
       createMessageBox("复制成功!");
-      console.log("文本已成功复制到剪贴板 ---- Kopi");
+      console.log("%c文本已成功复制到剪贴板 ---- Kopi", "color: #67c23a;");
     })
     .catch((err) => {
       console.error("复制失败:", err);
