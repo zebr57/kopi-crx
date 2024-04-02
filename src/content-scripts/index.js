@@ -2,6 +2,8 @@ import "../utils/userSelect.css"; // 移除禁止选中
 import "../utils/messageBox.css"; // 提示框
 import createMessageBox from "../utils/createMessageBox";
 
+let checked = true;
+
 /** 监听copy事件 */
 const copyListener = function () {
   document.addEventListener("copy", handleCopy, true); // true: 使用事件捕获机制，先执行外层的copy方法，再执行内层的copy方法
@@ -34,12 +36,13 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   // console.log(message.action); // 打印消息内容
   if (message.action == "toggle") {
     if (message.value) {
-      createMessageBox("Kopi 已开启");
+      if (checked != message.value) createMessageBox("Kopi 已开启");
       copyListener();
     } else {
-      createMessageBox("Kopi 已关闭", "warning");
+      if (checked != message.value) createMessageBox("Kopi 已关闭", "warning");
       document.removeEventListener("copy", handleCopy, true);
     }
   }
+  checked = message.value;
   sendResponse({ response: "Message received!" }); // 发送响应消息
 });

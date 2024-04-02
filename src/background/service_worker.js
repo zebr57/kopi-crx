@@ -16,7 +16,7 @@ chrome.storage.onChanged.addListener(async (changes, namespace) => {
       // 向当前标签页发送消息
       chrome.tabs.sendMessage(tabs[0].id, { action: "toggle", value: newValue }).catch((err) => {
         console.log(err);
-      });;
+      });
     }
   }
 });
@@ -39,6 +39,3 @@ chrome.commands.onCommand.addListener(async (command, tab) => {
     await chrome.storage.local.set({ checked: !checked });
   }
 });
-
-/* ===================================== test ===================================== */
-setTimeout(() => {}, 5000);
