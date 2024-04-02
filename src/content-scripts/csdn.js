@@ -37,7 +37,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
       copyListener();
     } else {
       // console.log("关闭 Kopi 文本复制");
-      document.removeEventListener("copy");
+      document.removeEventListener("click", function () {});
     }
   }
   sendResponse({ response: "Message received!" }); // 发送响应消息

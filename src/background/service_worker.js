@@ -24,12 +24,13 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
 /**
  * @description: 监听自定义快捷键指令
  */
-chrome.commands.onCommand.addListener((command, tab) => {
+chrome.commands.onCommand.addListener(async (command, tab) => {
   console.log(`Command "${command}" called`);
   if (command == "toggle") {
     // 开关
-    // 1. 通知脚本调用提示框
-    // 2. 修改 local checked的值
+    // - 修改 local checked的值
+    const { checked } = await chrome.storage.local.get("checked");
+    await chrome.storage.local.set({ checked: !checked });
   }
 });
 

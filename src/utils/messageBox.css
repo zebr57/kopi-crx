@@ -1,5 +1,5 @@
 /* 样式用于固定顶部的消息 */
-#kopi-message-box {
+.kopi-message-box {
   position: fixed;
   top: 20px;
   left: 50%;
@@ -7,12 +7,28 @@
   width: 150px;
   height: 36px;
   line-height: 36px;
-  color: rgb(126, 192, 80);
-  background-color: rgb(242, 249, 236);
+  color: #67c23a;
+  background: #f0f9eb;
+  border-color: #c2e7b0;
   text-align: center;
   transition: all 1s ease-in-out; /* 过渡效果 */
   opacity: 1; /* 初始透明度 */
   z-index: 9999;
   text-align: center;
   border-radius: 6px;
+}
+.kopi-message-box-success {
+  color: #67c23a;
+  background: #f0f9eb;
+  border-color: #c2e7b0;
+}
+.kopi-message-box-warning {
+  color: #e6a23c;
+  background: #fdf6ec;
+  border-color: #f5dab1;
+}
+.kopi-message-box-danger {
+  color: #f56c6c;
+  background: #fef0f0;
+  border-color: #fbc4c4;
 }

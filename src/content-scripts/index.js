@@ -34,11 +34,11 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   // console.log(message.action); // 打印消息内容
   if (message.action == "toggle") {
     if (message.value) {
-      // console.log("开启 Kopi 文本复制");
+      createMessageBox("Kopi 已开启");
       copyListener();
     } else {
-      // console.log("关闭 Kopi 文本复制");
-      document.removeEventListener("copy");
+      createMessageBox("Kopi 已关闭", "warning");
+      document.removeEventListener("copy", function () {});
     }
   }
   sendResponse({ response: "Message received!" }); // 发送响应消息
