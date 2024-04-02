@@ -4,7 +4,7 @@ chrome.runtime.onInstalled.addListener(async ({ reason }) => {
       url: "help.html"
     });
   }
-  await chrome.storage.local.set({ checked: false });
+  await chrome.storage.local.set({ checked: true });
 });
 
 chrome.storage.onChanged.addListener((changes, namespace) => {
