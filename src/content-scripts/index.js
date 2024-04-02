@@ -25,21 +25,20 @@ const copyListener = function () {
   );
 };
 
-copyListener();
+// 获取配置（开关）
+const { checked } = await chrome.storage.local.get("checked");
+if (checked) copyListener();
 
-// 监听来自 background 的消息
+// // 监听来自 background 的消息
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-  console.log(message.action); // 打印消息内容
+  // console.log(message.action); // 打印消息内容
   if (message.action == "toggle") {
-    console.log("message.value", message.value);
-    if (message.action == "toggle") {
-      if (message.value) {
-        console.log("开启copy事件监听");
-        copyListener();
-      } else {
-        console.log("移除copy事件监听");
-        document.removeEventListener("copy");
-      }
+    if (message.value) {
+      // console.log("开启 Kopi 文本复制");
+      copyListener();
+    } else {
+      // console.log("关闭 Kopi 文本复制");
+      document.removeEventListener("copy");
     }
   }
   sendResponse({ response: "Message received!" }); // 发送响应消息
