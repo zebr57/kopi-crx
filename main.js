@@ -17,6 +17,6 @@ chrome.storage.local.get("checked").then((res) => {
 // 存储函数
 function saveToLocalStorage(value) {
   chrome.storage.local.set({ checked: value }).then((res) => {
-    console.log("checked value", value);
+    // console.log("checked value", value);
   });
 }

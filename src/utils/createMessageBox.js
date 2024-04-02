@@ -5,7 +5,6 @@
  * @return {*}
  */
 export default function createMessageBox(message = "success！", id = "kopi-message-box") {
-  console.log('11');
   const messageElement = document.createElement("div");
   messageElement.innerHTML = message;
   messageElement.id = id;

@@ -24,7 +24,6 @@ export default class SwitchBtn {
       this.cb(checked);
     };
     checkbox.addEventListener("change", (e) => {
-      console.log(e.target.checked);
       setChecked(e.target.checked);
     });
     setChecked(this.checked);
