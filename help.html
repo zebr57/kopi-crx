@@ -89,15 +89,6 @@
       <h2>允许在每个网站启用复制，选中内容！</h2>
       <button class="read-btn">查看帮助文档</button>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-    <script>
-      confetti({
-        particleCount: 200,
-        spread: 180
-      });
-      document.querySelector(".read-btn").addEventListener("click", function (e) {
-        window.open("https://shen-linqiang.gitee.io/blog-vitepress/frontend/kopi-crx/", "_blank");
-      });
-    </script>
+    <script type="module" src="/helpMain.js"></script>
   </body>
 </html>

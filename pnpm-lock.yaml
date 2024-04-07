@@ -8,6 +8,9 @@ dependencies:
   '@types/chrome':
     specifier: ^0.0.263
     version: 0.0.263
+  canvas-confetti:
+    specifier: ^1.9.2
+    version: 1.9.2
 
 devDependencies:
   '@crxjs/vite-plugin':
@@ -442,6 +445,10 @@ packages:
     dependencies:
       fill-range: 7.0.1
     dev: true
+
+  /canvas-confetti@1.9.2:
+    resolution: {integrity: sha512-6Xi7aHHzKwxZsem4mCKoqP6YwUG3HamaHHAlz1hTNQPCqXhARFpSXnkC9TWlahHY5CG6hSL5XexNjxK8irVErg==}
+    dev: false
 
   /cheerio-select@2.1.0:
     resolution: {integrity: sha512-9v9kG0LvzrlcungtnJtpGNxY+fzECQKhK4EGJX2vByejiMX84MFNQw4UxPJl3bFbTMw+Dfs37XaIkCwTZfLh4g==}
