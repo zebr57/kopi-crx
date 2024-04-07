@@ -18,7 +18,19 @@ export default defineManifest(async (env) => ({
   version_name: version,
   action: {
     default_popup: "index.html",
-    default_title: "Kopi 文本复制"
+    default_title: "Kopi 文本复制",
+    default_icon: {
+      16: "kopi.png",
+      32: "kopi.png",
+      48: "kopi.png",
+      128: "kopi.png"
+    }
+  },
+  icons: {
+    16: "kopi.png",
+    32: "kopi.png",
+    48: "kopi.png",
+    128: "kopi.png"
   },
   background: {
     service_worker: "src/background/service_worker.js",
