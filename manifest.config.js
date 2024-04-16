@@ -16,6 +16,7 @@ export default defineManifest(async (env) => ({
   version: `${major}.${minor}.${patch}.${label}`,
   // semver is OK in "version_name"
   version_name: version,
+  description: "一键解除页面禁止文本复制的限制。",
   action: {
     default_popup: "index.html",
     default_title: "Kopi 文本复制",
@@ -56,15 +57,9 @@ export default defineManifest(async (env) => ({
     // 自定义快捷键指令
     toggle: {
       suggested_key: {
-        default: "Alt+Q"
+        default: "Alt+K"
       },
       description: "开关复制功能"
-    },
-    // 映射 action （icon的事件）
-    _execute_action: {
-      suggested_key: {
-        default: "Alt+V"
-      }
     }
   }
 }));
