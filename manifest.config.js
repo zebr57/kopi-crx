@@ -37,7 +37,7 @@ export default defineManifest(async (env) => ({
     service_worker: "src/background/service_worker.js",
     type: "module"
   },
-  permissions: ["storage", "commands", "tabs", "activeTab"],
+  permissions: ["storage", "commands", "activeTab"],
   side_panel: {
     default_path: "index.html"
   },
