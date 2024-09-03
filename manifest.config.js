@@ -51,6 +51,11 @@ export default defineManifest(async (env) => ({
       matches: ["https://blog.csdn.net/*"],
       js: ["src/content-scripts/csdn.js"],
       run_at: "document_end"
+    },
+    {
+      matches: ["https://juejin.cn/*"],
+      js: ["src/content-scripts/juejin.js"],
+      run_at: "document_end"
     }
   ],
   commands: {
