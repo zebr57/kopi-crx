@@ -4,6 +4,13 @@
 
 格式遵循 [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 的规范，并且遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/) 版本控制。
 
+## [v1.0.3] - 2024-10-25
+
+### FIXED
+- 修复chrome 130版本 安全策略问题，禁止页面插入脚本
+  [Chrome 130及以上版本的CSP问题 #918](https://github.com/crxjs/chrome-extension-tools/issues/918)
+  
+
 ## [v1.0.2] - 2024-09-03
 
 ### Added
